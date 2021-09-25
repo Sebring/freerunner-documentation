@@ -28,7 +28,6 @@ Freerunner was created by the love for the game engine [Crafty](http://craftyjs.
 Freerunner is written in Typescript, giving you the power of intellisense and typed objects.
 Feel free to write you own parts in Javascript, you will still benefit from the intellisense.
 To develop a Freerunner game it needs a web application bundler and it comes configured for parcel.
-[Read more](link)
 
 ### Intutive API
 _Event driven component entity system_.
