@@ -13,10 +13,10 @@ It is just a raw wrapper around [crafty](http://craftyjs.com) with all its glory
 
 ## Nearest milestones:
 
-### 0.0.1 - the package
+### 0.1.0 - the package
 A working npm-package with crafty wrapped with limited typescript support. Using an full featured game engine means a the api is big and the intellisense enabled by typescript is such a timesaver. Writing interfaces and definitions will be ongoing and I do not strive to make it complete yet but will add more support for each release.
 
-### 0.0.2 - the imports
+### 0.2.0 - the imports
 Having components as separate es modules. This will keep game code manageble as the game evolves and features are added. However it will also make reusing components even easier.
 
 From:
@@ -34,7 +34,7 @@ import MyComponent from '/components/MyComponents'
 Freerunner.cc(MyComponent)
 ```
 
-### 0.0.3 -- the plugins
+### 0.3.0 -- the plugins
 Using a plugin should be as easy as importing it and loading it into Freerunner. A plugin should be able to add
 * components
 * systems
@@ -56,13 +56,6 @@ const level1 = DungeonPlugin.generateLevel() // custom functions
 
 Plugins should have a defined way of testing and showcasing them, like a minimal demo.
 
-```javascript
-import DungeonPlugin from 'freerunner-dungeon'
-
-DungeonPlugin.runDemo(Freerunner)
-```
-
-or why not from console having Freerunner as a dev-dependency 
 ```bash
 yarn demo
 ```
