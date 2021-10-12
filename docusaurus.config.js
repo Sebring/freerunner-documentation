@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 (module.exports = {
-  title: 'Freerunner',
+  title: 'Freerunner Game Engine',
   tagline: 'Power is nothing without control',
   url: 'https://sebring.github.io',
   baseUrl: '/freerunner/',
@@ -14,7 +14,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   organizationName: 'sebring', // Usually your GitHub org/user name.
   projectName: 'freerunner', // Usually your repo name.
   trailingSlash: false,
-
+  plugins: [
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        entryPoints: ['../freerunner/src/freerunner.ts'],
+        tsconfig: ['../freerunner/tsconfig.json']
+      }
+    ]
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -52,8 +60,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentation',
           },
+          {to: 'docs/api', activeBasePath: 'docs', label: 'API', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/sebring/freerunner',
